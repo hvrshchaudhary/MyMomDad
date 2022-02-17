@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { AiOutlineUser, AiOutlineSearch } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { smallScreen, smallerScreen, tablets, smallTablets, smallerTablets, bigMobiles, mobiles, smallMobiles } from "../Responsive";
 const Container = styled.div`
   font-family: "Bakbak One", cursive;
 `;
@@ -20,12 +20,18 @@ const Left = styled.div`
 `;
 const Logo = styled.h1`
   font-weight: 300;
+  ${smallScreen({fontSize:"28px"})}
+  ${smallerScreen({fontSize:"24px"})}
+  ${tablets({fontSize:"20px"})}
+  ${smallerTablets({fontSize:"16px", paddingLeft:"15px"})}
+
 `;
 const Center = styled.div`
   flex: 3;
   display: flex;
   align-items: center;
   justify-content: center;
+
 `;
 const SearchContainer = styled.div`
   border: none;
@@ -37,29 +43,54 @@ const SearchContainer = styled.div`
   justify-content: space-around;
   background-color: #f9f9f9;
   width: 40%;
+  ${smallTablets({justifyContent:"space-between"})}
+
 `;
 const L = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
   cursor: pointer;
+  ${tablets({display:"none"})}
+
 `;
 const Selector = styled.h3`
   padding: 5px;
   font-weight: 100;
+  ${smallScreen({fontSize:"15px"})}
+  ${smallerScreen({fontSize:"12px"})}
+  
 `;
 const C = styled.div`
   display: flex;
+  align-items: center;
+  ${smallScreen({fontSize:"15px"})}
+  ${smallerScreen({fontSize:"12px"})}
+  ${tablets({fontSize:"13px"})}
 `;
 const Input = styled.span`
+  display: flex;
   font-weight: 100;
   color: lightgray;
   width: 100%;
+  ${smallScreen({fontSize:"15px"})}
+  ${smallerScreen({fontSize:"12px"})}
+  ${tablets({fontSize:"13px"})}
+  ${smallTablets({display:"none"})}
+
+`;
+const Search = styled.div`
+  color: lightgray;
+  font-weight: 100;
+  padding-right:2.5px;
 `;
 const R = styled.div`
   font-size: 20px;
   align-content: flex-end;
   cursor: pointer;
+  ${smallScreen({fontSize:"15px"})}
+  ${smallerScreen({fontSize:"12px"})}
+    
 `;
 const Right = styled.div`
   flex: 1;
@@ -67,11 +98,15 @@ const Right = styled.div`
   font-size: 24px;
   align-items: center;
   justify-content: center;
+  ${tablets({fontSize:"18px"})}
+  
 `;
 const Bottom = styled.div`
   background-color: #f9f9f9;
-  height: 40px;
+  height: 50px;
   align-content: center;
+  ${smallerTablets({height:"30px"})}
+  
 `;
 const Menu = styled.div`
   display: flex;
@@ -81,10 +116,19 @@ const Menu = styled.div`
 const MenuItem = styled.h3`
   font-weight: 450;
   font-size: 18px;
+  cursor: pointer;
   padding: 10px 30px;
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
+  ${smallScreen({fontSize:"16px"})}
+  ${smallerScreen({fontSize:"14px"})}
+  ${tablets({fontSize:"12px"})}
+  ${smallerTablets({fontSize:"10px", padding:"7px 25px", fontWeight:"300"})}
+  ${bigMobiles({fontSize:"9px", padding:"6px 18px"})}
+  ${mobiles({fontSize:"9px", padding:"6px 10px"})}
+  ${smallMobiles({fontSize:"9px", padding:"6px 6px"})}
+  
 `;
 
 const Header = () => {
@@ -102,7 +146,7 @@ const Header = () => {
                 <IoIosArrowDown />
               </L>
               <C>
-                <Input> | Search Products, categories ...</Input>
+                <Search>Search</Search><Input> Products, categories ...</Input>
               </C>
               <R>
                 <AiOutlineSearch />

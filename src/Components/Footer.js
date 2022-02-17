@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles, mediumTablets, smallMobiles, smallTablets } from "../Responsive";
 
 const Container = styled.div`
-  background-color: black;
   font-family: 'Poppins', sans-serif;
 `;
 const Wrapper = styled.div`
   background-color: #f5f5f5;
   padding: 50px;
-  margin: 0 6px;
 `;
 const Top = styled.div`
   display: flex;
@@ -19,14 +18,27 @@ const Category = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Heading = styled.h3``;
+const Heading = styled.h3`
+  ${mediumTablets({fontSize:"14px"})}
+  ${smallTablets({fontSize:"12px"})}
+  ${bigMobiles({fontSize:"10px"})}
+  ${smallMobiles({fontSize:"8px"})}
+  
+`;
 const Item = styled.span`
   color: #98b35d;
   padding: 10px 0;
+  ${mediumTablets({fontSize:"10px", padding:"8px 0"})}
+  ${smallTablets({fontSize:"8px", padding:"6px 0"})}
+  ${bigMobiles({fontSize:"6px", padding:"4px 0"})}
+
 `;
 const Bottom = styled.div``;
 const Copyright = styled.span`
   font-weight: 300;
+  ${mediumTablets({fontSize:"10px"})}
+  ${smallTablets({fontSize:"8px"})}
+  ${bigMobiles({fontSize:"6px"})}
 `;
 const Footer = () => {
   return (
