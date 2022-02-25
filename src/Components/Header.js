@@ -62,14 +62,18 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 30px;
 `;
 const Logo = styled.h1`
   font-weight: 300;
+  display: flex;
+  align-items: center;
   ${smallScreen({ fontSize: "28px" })}
   ${smallerScreen({ fontSize: "24px" })}
   ${tablets({ fontSize: "20px" })}
   ${smallerTablets({ fontSize: "16px", paddingLeft: "15px" })}
 `;
+const Img = styled.img``;
 const Center = styled.div`
   flex: 3;
   display: flex;
@@ -192,7 +196,7 @@ const Header = () => {
         <hr />
         <Top>
           <Left>
-            <Logo>MyMomDad</Logo>
+            <Logo><Img src="logo.png"/>MyMomDad</Logo>
           </Left>
           <Center>
             <SearchContainer>
