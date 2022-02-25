@@ -10,7 +10,7 @@ const Img = styled.img`
 const Slider = () => {
   return (
     <Container>
-      <Img src="slider1.png"/>
+      <Img src="1.png"/>
     </Container>
   )
 }

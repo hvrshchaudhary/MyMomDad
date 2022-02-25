@@ -31,11 +31,14 @@ const Button = styled.button`
 const Bottom = styled.div`
   height: 70vh;
   display: grid;
+  margin: 30px 0 ;
   grid-template-columns: 1.7fr 1.1fr 1.8fr;
   grid-template-rows: 1fr;
   grid-template-areas: "left center right";
 `;
-const Img = styled.img``;
+const Img = styled.img`
+  
+`;
 const Left = styled.div`
   grid-area: left;
   display: flex;
@@ -45,7 +48,13 @@ const Left = styled.div`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
+`;
+const InfoDaddy = styled.div`
   position: absolute;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   height: 100%;
   width: 100%;
@@ -97,7 +106,7 @@ const BGifts = styled.button`
   border: none;
   background-color: #f4f8ec;
   padding: 0 20px;
-  border-radius: 10px;  
+  border-radius: 10px;
   color: #6a983c;
   margin-bottom: 10px;
 `;
@@ -157,11 +166,13 @@ const Blog = () => {
           <Left>
             <Info>
               <Img src="BirthdayGift.png" />
-              <InFooter>
-                <InHd>20 Thoughtful Gifts For Mom</InHd>
-                <Img src="" />
-                <Author1>Author 17.2.2022</Author1>
-              </InFooter>
+              <InfoDaddy>
+                <InFooter>
+                  <InHd>20 Thoughtful Gifts For Mom</InHd>
+                  <Img src="" />
+                  <Author1>Author 17.2.2022</Author1>
+                </InFooter>
+              </InfoDaddy>
             </Info>
           </Left>
           <Center>
