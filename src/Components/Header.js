@@ -12,6 +12,7 @@ import {
   mobiles,
   smallMobiles,
 } from "../Responsive";
+import { Link } from "react-router-dom";
 const Container = styled.div`
   /* font-family: "Bakbak One", cursive; */
 `;
@@ -220,7 +221,9 @@ const Header = () => {
         <Bottom>
           <Menu>
             <MenuItem>
+            <Link to="/" style={{textDecoration:"none",color:"black"}}>
               Home
+            </Link>
               <IoIosArrowDown />
             </MenuItem>
             <MenuItem>
@@ -232,11 +235,15 @@ const Header = () => {
               <IoIosArrowDown />
             </MenuItem>
             <MenuItem>
+            <Link to="/about" style={{textDecoration:"none",color:"black"}}>
               About
+            </Link>
               <IoIosArrowDown />
             </MenuItem>
             <MenuItem>
+            <Link to="/contactus" style={{textDecoration:"none",color:"black"}}>
               Contact
+            </Link>
               <IoIosArrowDown />
             </MenuItem>
           </Menu>

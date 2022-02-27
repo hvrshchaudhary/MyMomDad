@@ -6,17 +6,19 @@ import CategoryPageList from "./Pages/CategoryPageList";
 import ContactUs from "./Pages/ContactUs";
 import Home from "./Pages/Home";
 import ProductDetail from "./Pages/ProductDetail";
-
+import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
-    <>
-      {/* <Home/> */}
-      {/* <AboutUs/> */}
-      {/* <ContactUs/> */}
-      {/* <CategoryPageList/> */}
-      {/* <CategoryPageGrid/> */}
-      <ProductDetail/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>   
+        <Route path="/about" element={<AboutUs />}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/categorypagelist" element={<CategoryPageList/>}/>
+        <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
+        <Route path="/productdetail" element={<ProductDetail/>}/>
+      </Routes>
+    </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-
+import { Link } from "react-router-dom";
 const Container = styled.div`
   font-family: "Poppins";
 `;
@@ -440,7 +440,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>
@@ -453,7 +453,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>
@@ -466,7 +466,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>
@@ -479,7 +479,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>
@@ -492,7 +492,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>
@@ -505,7 +505,7 @@ const ProductDetail = () => {
                 <CardBottom>
                   <L3>₹ 234</L3>
                   <R3>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R3>
                 </CardBottom>
               </Card>

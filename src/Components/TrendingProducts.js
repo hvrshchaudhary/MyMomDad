@@ -1,5 +1,6 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -145,7 +146,7 @@ const TrendingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -158,7 +159,7 @@ const TrendingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -171,7 +172,7 @@ const TrendingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -184,7 +185,7 @@ const TrendingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>

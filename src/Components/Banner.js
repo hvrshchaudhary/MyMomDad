@@ -1,5 +1,6 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -89,7 +90,7 @@ const Banner = () => {
               <BSubFocus>Banner subfocus</BSubFocus>
               <BHead>Gifts for MomDad</BHead>
               <Button>
-                View Products <IoIosArrowForward color="#6A983C" />
+                <Link to="/categorypagegrid" style={{textDecoration:"none",color:"black"}}>View Products</Link> <IoIosArrowForward color="#6A983C" />
               </Button>
             </Headings>
           </Info>
@@ -101,7 +102,7 @@ const Banner = () => {
               <BSubFocus>Banner subfocus</BSubFocus>
               <BHead>Gifts for MomDad</BHead>
               <Button>
-                View Products <IoIosArrowForward color="#6A983C" />
+              <Link to="/categorypagegrid" style={{textDecoration:"none",color:"black"}}>View Products</Link><IoIosArrowForward color="#6A983C" />
               </Button>
             </Headings>
           </Info>

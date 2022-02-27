@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
-
+import {Link} from "react-router-dom"
 const Container = styled.div`
   background-color: #f1f1f1;
   font-family: "Poppins", sans-serif;
@@ -143,7 +143,7 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -156,7 +156,7 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -169,7 +169,7 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -182,7 +182,7 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
                 </CardBottom>
               </Card>
