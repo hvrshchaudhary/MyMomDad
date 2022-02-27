@@ -1,7 +1,11 @@
+import CardListView from "./Components/CardListView";
+import Subcategories from "./Components/Subcategories";
 import AboutUs from "./Pages/AboutUs";
-import CategoryPage from "./Pages/CategoryPage";
+import CategoryPageGrid from "./Pages/CategoryPageGrid";
+import CategoryPageList from "./Pages/CategoryPageList";
 import ContactUs from "./Pages/ContactUs";
 import Home from "./Pages/Home";
+import ProductDetail from "./Pages/ProductDetail";
 
 function App() {
   return (
@@ -9,7 +13,9 @@ function App() {
       {/* <Home/> */}
       {/* <AboutUs/> */}
       {/* <ContactUs/> */}
-      <CategoryPage/>
+      {/* <CategoryPageList/> */}
+      {/* <CategoryPageGrid/> */}
+      <ProductDetail/>
     </>
   );
 }
