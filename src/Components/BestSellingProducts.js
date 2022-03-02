@@ -1,17 +1,20 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import { tablets } from "../Responsive";
 const Container = styled.div`
   background-color: #f1f1f1;
   font-family: "Poppins", sans-serif;
   height: 55vh;
+  ${tablets({ height: "50vh" })}
 `;
 const Wrapper = styled.div`
   padding: 30px;
   display: flex;
   flex-direction: column;
   padding-left: 90px;
+  ${tablets({ paddingLeft: "30px" })}
 `;
 const Top = styled.div`
   display: flex;
@@ -21,6 +24,7 @@ const Top = styled.div`
 `;
 const Heading = styled.h1`
   font-weight: 500;
+  ${tablets({ fontSize: "22px", fontWeight: "450" })}
 `;
 const Button = styled.button`
   display: flex;
@@ -33,9 +37,9 @@ const Button = styled.button`
   background-color: white;
   color: black;
   border-radius: 10px;
+  ${tablets({ fontSize: "13px" })}
 `;
-const Bottom = styled.div`
-`;
+const Bottom = styled.div``;
 const Cards = styled.div`
   height: 30vh;
   justify-content: space-between;
@@ -92,12 +96,17 @@ const ProductTitle = styled.h3`
   padding: 10px 0;
   font-weight: 500;
   font-size: 16px;
+  ${tablets({ fontSize: "14px" })}
 `;
 const PDesc = styled.span`
   font-size: 12px;
   color: gray;
+  ${tablets({ fontSize: "11px" })}
 `;
-const Img = styled.img``;
+const Img = styled.img`
+  cursor: pointer;
+  ${tablets({ height: "150px", width: "200px" })}
+`;
 const CardBottom = styled.div`
   display: flex;
   flex-direction: row;
@@ -107,6 +116,7 @@ const CardBottom = styled.div`
 const L = styled.div`
   display: flex;
   align-items: center;
+  ${tablets({ fontSize: "14px" })}
 `;
 const R = styled.div`
   display: flex;
@@ -121,6 +131,7 @@ const BuyNow = styled.button`
   background-color: #6a983c;
   color: white;
   font-weight: 700;
+  ${tablets({ fontSize: "13px", padding: "5px 12px" })}
 `;
 
 const BestSellingProducts = () => {
@@ -143,7 +154,14 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
+                    <BuyNow>
+                      <Link
+                        to="/productdetail"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Buy Now
+                      </Link>
+                    </BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -156,7 +174,14 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
+                    <BuyNow>
+                      <Link
+                        to="/productdetail"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Buy Now
+                      </Link>
+                    </BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -169,7 +194,14 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
+                    <BuyNow>
+                      <Link
+                        to="/productdetail"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Buy Now
+                      </Link>
+                    </BuyNow>
                   </R>
                 </CardBottom>
               </Card>
@@ -182,7 +214,14 @@ const BestSellingProducts = () => {
                 <CardBottom>
                   <L>₹ 234</L>
                   <R>
-                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
+                    <BuyNow>
+                      <Link
+                        to="/productdetail"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Buy Now
+                      </Link>
+                    </BuyNow>
                   </R>
                 </CardBottom>
               </Card>

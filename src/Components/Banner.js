@@ -2,11 +2,14 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { smallerScreen, smallTablets, tablets } from "../Responsive";
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
   height: 80vh;
   margin: 0 75px;
+  ${tablets({ height: "50vh", margin: "0 50px" })}
+  ${smallTablets({ height: "35vh", margin: "0 50px" })}
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -37,12 +40,12 @@ const Right = styled.div`
   margin-left: 20px;
 `;
 const Img = styled.img`
-width: 100%;
+  width: 100%;
   height: 73%;
   align-self: center;
 `;
 const Info = styled.div`
-width: 100%;
+  width: 100%;
   display: flex;
   position: relative;
   align-content: center;
@@ -53,14 +56,20 @@ const Headings = styled.div`
   position: absolute;
   top: 60px;
   left: 50px;
+  ${smallTablets({ top:"30px", left:"25px"})}
 `;
 const BSubFocus = styled.h5`
   font-weight: 600;
   color: #6a983c;
+  ${tablets({ fontSize: "14px", fontWeight: "500" })}
+  ${smallTablets({ fontSize: "11px", fontWeight: "450" })}
 `;
 const BHead = styled.h1`
   font-weight: 600;
   margin-bottom: 230px;
+  ${smallerScreen({ marginBottom: "160px" })}
+  ${tablets({ marginBottom: "70px", fontSize: "24px", fontWeight: "500" })}
+  ${smallTablets({ marginBottom: "60px", fontWeight: "450", fontSize: "18px" })}
 `;
 const Button = styled.button`
   display: flex;
@@ -78,6 +87,8 @@ const Button = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+  ${tablets({ fontSize: "13px" })}
+  ${smallTablets({ fontSize: "10px", padding:"8px 0" })}
 `;
 const Banner = () => {
   return (
@@ -90,7 +101,13 @@ const Banner = () => {
               <BSubFocus>Banner subfocus</BSubFocus>
               <BHead>Gifts for MomDad</BHead>
               <Button>
-                <Link to="/categorypagegrid" style={{textDecoration:"none",color:"black"}}>View Products</Link> <IoIosArrowForward color="#6A983C" />
+                <Link
+                  to="/categorypagegrid"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  View Products
+                </Link>{" "}
+                <IoIosArrowForward color="#6A983C" />
               </Button>
             </Headings>
           </Info>
@@ -102,7 +119,13 @@ const Banner = () => {
               <BSubFocus>Banner subfocus</BSubFocus>
               <BHead>Gifts for MomDad</BHead>
               <Button>
-              <Link to="/categorypagegrid" style={{textDecoration:"none",color:"black"}}>View Products</Link><IoIosArrowForward color="#6A983C" />
+                <Link
+                  to="/categorypagegrid"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  View Products
+                </Link>
+                <IoIosArrowForward color="#6A983C" />
               </Button>
             </Headings>
           </Info>
