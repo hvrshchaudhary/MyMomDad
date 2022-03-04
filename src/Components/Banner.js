@@ -117,7 +117,7 @@ const Banner = () => {
             <Img src="banner2.png" />
             <Headings>
               <BSubFocus>Banner subfocus</BSubFocus>
-              <BHead>Gifts for MomDad</BHead>
+              <BHead>Gifts from MomDad</BHead>
               <Button>
                 <Link
                   to="/categorypagegrid"
