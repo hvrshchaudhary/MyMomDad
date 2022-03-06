@@ -12,6 +12,13 @@ import ShoppingCart from "./Pages/ShoppingCart";
 import OrderSummary from "./Components/OrderSummary";
 import Checkout from "./Pages/Checkout";
 import Subscribe from "./Components/Subscribe";
+import Blog from "./Pages/Blog";
+import Login from "./Pages/Login";
+import ForgotPassword from "./Pages/ForgotPassword";
+import Profile from "./Pages/Profile";
+import OrderHistory from "./Pages/OrderHistory";
+import ReturnAndComplaints from "./Pages/ReturnsAndComplaints";
+import ShippingAddress from "./Pages/ShippingAddress";
 function App() {
   return (
     // <Router>
@@ -24,7 +31,7 @@ function App() {
     //     <Route path="/productdetail" element={<ProductDetail/>}/>
     //   </Routes>
     // </Router>
-    <Subscribe/>
+    <ShippingAddress/>
   );
 }
 
