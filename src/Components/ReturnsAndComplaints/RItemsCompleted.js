@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { bigMobiles, smallMobiles, smallScreen, smallTablets } from '../../Responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -12,9 +13,13 @@ const Left = styled.div`
   display: flex;
   flex: 1;
   justify-content: space-between;
+  ${smallScreen({flex:"2"})}
 `;
 const Span = styled.span`
   font-weight: 400;
+  ${smallScreen({fontSize:"12px"})}
+  ${smallTablets({fontSize:"11px"})}
+  ${bigMobiles({fontSize:"8px", margin:"0 5px"})}
 `;
 const Right = styled.div`
   flex: 1;

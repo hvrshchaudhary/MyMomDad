@@ -1,13 +1,13 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
-import { smallTablets, tablets } from "../Responsive";
+import { bigMobiles, smallTablets, tablets } from "../Responsive";
 
 const Container = styled.div`
-  height: 70vh;
+  height: auto;
   background-color: white;
   font-family: "Poppins";
-  ${tablets({ height:"60vh" })}
+  ${tablets({  })}
 `;
 const Wrapper = styled.div`
   padding: 30px;
@@ -36,13 +36,15 @@ const Button = styled.button`
   ${tablets({ fontSize:"13px" })}
 `;
 const Bottom = styled.div`  
-  height: 70vh;
+  height: auto;
   display: grid;
   margin: 30px 0 ;
   grid-template-columns: 1.7fr 1.1fr 1.8fr;
   grid-template-rows: 1fr;
   grid-template-areas: "left center right";
-  ${tablets({ height:"50vh" })}
+  /* ${tablets({ height:"50vh" })} */
+  ${smallTablets({ display:"flex", flexDirection:"row" })}
+  ${bigMobiles({ display:"flex", flexDirection:"column" })}
 `;
 const Img = styled.img`
   
@@ -53,7 +55,9 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  ${smallTablets({ height:"40vh" })}
+  ${smallTablets({ flex:"1", width:"24vw" })}
+  ${bigMobiles({ width:"auto" })}
+
 `;
 const Info = styled.div`
   display: flex;
@@ -68,6 +72,8 @@ const InfoDaddy = styled.div`
   justify-content: flex-end;
   height: 100%;
   width: 100%;
+  ${bigMobiles({ paddingBottom:"90px" })}
+
 `;
 const InHd = styled.h1`
   color: white;
@@ -99,21 +105,27 @@ const Center = styled.div`
   padding: 20px;
   position: relative;
   justify-content: center;
-  ${smallTablets({ height:"40vh" })}
+  ${smallTablets({ flex:"1", width:"27vw" })}
+  ${bigMobiles({ padding:"20px 0", width:"auto" })}
 `;
 const CFooter = styled.div`
   display: flex;
   flex-direction: column;
+  ${bigMobiles({ margin:"20px" })}
 `;
 const InHd1 = styled.h1`
   color: black;
   font-weight: 600;
   font-size: 20px;
   ${tablets({ fontSize:"16px" })}
+  ${smallTablets({ fontSize:"15px" })}
+  ${bigMobiles({ fontSize:"20px" })}
+
 `;
 const T = styled.div`
   margin: 20px 0;
   ${tablets({ margin:"13px" })}
+  ${smallTablets({ margin:"0px" })}
 `;
 const BGifts = styled.button`
   border: none;
@@ -140,12 +152,11 @@ const Dat = styled.span`
 `;
 
 const Right = styled.div`
-  /* padding: 20px; */
   grid-area: right;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  ${smallTablets({ height:"40vh" })}
+  ${smallTablets({ flex:"1"})}
 `;
 const InHd2 = styled.h1`
   color: black;
@@ -153,6 +164,7 @@ const InHd2 = styled.h1`
   font-size: 20px;
   ${tablets({ fontSize:"16px" })}
   ${smallTablets({ fontSize:"12px", fontWeight:"300" })}
+  ${bigMobiles({ fontSize:"14px" })}
 `;
 const Rt = styled.div`
   display: flex;
@@ -172,6 +184,7 @@ const Rb = styled.div`
 `;
 const Rl = styled.div`
   ${tablets({ display:"flex", flexDirection:"column", justifyContent:"center" })}
+  ${smallTablets({ width:"150px" })}
   
 `;
 const Br = styled.div`

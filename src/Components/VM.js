@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-
+import { bigMobiles, smallTablets, tablets } from "../Responsive";
 const Container = styled.div`
   display: flex;
   background-color: #f1f1f1;
   flex-direction: row;
-  height: 80vh;
   font-family: "Poppins", sans-serif;
+  height: auto;
+  padding: 20px;
   justify-content: space-between;
+  ${smallTablets({flexDirection:"column", margin:"3rem 0rem"})}
+  ${bigMobiles({flexDirection:"column", margin:"3rem 0rem"})}
 `;
 const Left = styled.div`
   flex: 1;
@@ -25,20 +28,41 @@ const Right = styled.div`
 `;
 const Top = styled.div`
   display: flex;
+  margin-top: 10px;
   justify-content: center;
+  
 `;
 const Bottom = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 145px;
   margin-top: 30px;
+  margin-bottom: 2rem;
+  ${tablets({margin:"30px", marginLeft:"80px"})}
+  ${smallTablets({ margin:"30px", marginLeft:"90px"})}
+  ${bigMobiles({marginLeft:"30px"})}
+
 `;
-const Img = styled.img``;
+const Img = styled.img`
+${tablets({width:"70%"})}
+${bigMobiles({width:"60%"})}
+`;
 const H1 = styled.h1`
   font-weight: 500;
+  ${tablets({fontSize:"24px"})}
+  ${bigMobiles({
+    fontSize:"18px",
+    marginLeft:"10px"
+  })}
+  
 `;
 const Desc = styled.p`
   font-size: 18px;
+  ${tablets({fontSize:"12px"})}
+  ${bigMobiles({
+    padding:"1rem",
+    fontSize:"14px", 
+  })}
 `;
 const VM = () => {
   return (

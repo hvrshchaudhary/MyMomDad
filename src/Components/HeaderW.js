@@ -204,7 +204,7 @@ const MenuItem2 = styled.h3`
   ${bigMobiles({ display:"none" })}
 `;
 
-const Header = () => {
+const HeaderW = () => {
   return (
     <Container>
       <Wrapper>
@@ -225,7 +225,7 @@ const Header = () => {
         <hr />
         <Top>
           <Left>
-            <Logo><Img src="logo.png"/>MyMomDad</Logo>
+            <Logo>MyMomDad</Logo>
           </Left>
           <Center>
             <SearchContainer>
@@ -281,4 +281,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderW;

@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from "styled-components";
+import { bigMobiles } from '../../Responsive';
 
 const Container = styled.div`
   display: flex;
   font-family: "Poppins", sans-serif;
   flex-direction: column;
   margin-top: 60px;
+  ${bigMobiles({ marginTop:"20px" })}
 `;
 const Top = styled.div`
   display: flex;
@@ -14,6 +16,7 @@ const Top = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 32px;
+  ${bigMobiles({ fontSize:"22px" })}
 `;
 const Span = styled.div`
   display: flex;
@@ -23,11 +26,13 @@ const S1 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const S2 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Card = styled.div`
   display: flex;
@@ -41,11 +46,13 @@ const Top1 = styled.div`
   margin: 30px;
   margin-bottom: 10px;
   align-items: center;
+  ${bigMobiles({ margin:"20px" })}
 `;
 const Bottom = styled.div`
   margin: 30px;
   margin-top: 15px;
   margin-bottom: 150px;
+  ${bigMobiles({margin:"20px", marginBottom:"100px",marginTop:"0"  })}
   
 `;
 const Input = styled.input`
@@ -56,6 +63,7 @@ const Input = styled.input`
   font-size: 18px;
   padding: 15px 20px;
   width: 96%;
+  ${bigMobiles({ padding:"10px 15px", width:"90%", fontSize:"15px" })}
 `;
 const Row = styled.div`
   display: flex;

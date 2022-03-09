@@ -24,6 +24,7 @@ const Contact = styled.div`
   flex-direction: row;
   margin: 20px;
   margin-bottom: 10px;
+  ${bigMobiles({ display:"none" })}
 `;
 const CLeft = styled.div`
   flex: 1;
@@ -34,12 +35,14 @@ const CItem = styled.h5`
   margin: 0 15px;
   font-weight: 300;
   font-size: 14px;
+  ${smallTablets({ margin:"0 8px", fontSize:"12px" })}
 `;
 const CItemg = styled.h5`
   font-weight: 300;
   margin: 0 15px;
   color: #6a983c;
   font-size: 14px;
+  ${smallTablets({ margin:"0 8px", fontSize:"12px" })}
 `;
 const CRight = styled.div`
   display: flex;
@@ -163,6 +166,11 @@ const H1 = styled.h1`
   margin-bottom: 30px;
   font-weight: 600;
 `;
+const Img = styled.img`
+  margin:20px 35px;
+  width: 96%;
+  ${bigMobiles({ display:"none" })}
+`;
 const Header = () => {
   return (
     <Container>
@@ -210,7 +218,7 @@ const Header = () => {
           <L2>Blog</L2>
         </Bottom>
         <H1>Blog</H1>
-        <img style={{margin:'20px 35px', width:"96%"}} src="blog.png"/>
+        <Img style={{margin:'20px 35px', width:"96%"}} src="blog.png"/>
       </Wrapper>
     </Container>
   );

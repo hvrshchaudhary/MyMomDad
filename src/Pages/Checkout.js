@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import OrderSummary from "../Components/OrderSummary";
@@ -10,12 +9,15 @@ import PaymentMethod from "../Components/CheckoutPage/PaymentMethod";
 import AdditionalInformation from "../Components/CheckoutPage/AdditionalInformation";
 import Confirmation from "../Components/CheckoutPage/Confirmation";
 import Copyright from "../Components/CheckoutPage/Copyright";
+import HeaderW from "../Components/HeaderW";
+import { bigMobiles, smallTablets } from "../Responsive";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 60px;
   margin-bottom: 0;
+  ${bigMobiles({ margin:"20px" })}
   
 `;
 const Wrapper = styled.div`
@@ -29,12 +31,13 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  ${smallTablets({ display:"none" })}
 `;
 const Checkout = () => {
   return (
     <>
       <Router>
-        <Header />
+        <HeaderW />
         <Container>
           <Wrapper>
             <Left>

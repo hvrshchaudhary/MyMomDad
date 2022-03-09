@@ -1,26 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Nav_Filter from "../Components/Nav_Filter";
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const Left = styled.div`
-  flex: 1;
-`;
+// const Left = styled.div`
+//   flex: 1;
+// `;
 const Right = styled.div`
   flex: 3;
+  margin: 30px;
 `;
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(238px , 1fr));
+  grid-gap: 30px;
 `;
 const Card1 = styled.div`
-  grid-area: card1;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -77,172 +77,156 @@ const CategoryPageGrid = () => {
       <Header />
       <Nav_Filter />
       <Container>
-        <Left></Left>
+        {/* <Left></Left> */}
         <Right>
           <Row>
-            <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+          <Card1>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
-              </Card>
-            </Card1>
-          </Row>
-          <Row>
-            <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
-                  <R>
-                    <BuyNow>Buy Now</BuyNow>
-                  </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
-              </Card>
-            </Card1>
-          </Row>
-          <Row>
-            <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
-                  <R>
-                    <BuyNow>Buy Now</BuyNow>
-                  </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
               </Card>
             </Card1>
             <Card1>
-              <Card>
-                <Img src="bestSelling2.png" />
-                <ProductTitle>Product Title</ProductTitle>
-                <PDesc>Space for small product description</PDesc>
-                <CardBottom>
-                  <L>₹ 234</L>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
                   <R>
-                    <BuyNow>Buy Now</BuyNow>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
                   </R>
-                </CardBottom>
+                  </CardBottom>
+              </Card>
+            </Card1>
+            <Card1>
+                <Card>
+                  <Img src="bestSelling2.png" />
+                  <ProductTitle>Product Title</ProductTitle>
+                  <PDesc>Space for small product description</PDesc>
+                  <CardBottom>
+                    <L>₹ 234</L>
+                  <R>
+                    <BuyNow><Link to="/productdetail" style={{textDecoration:"none",color:"white"}}>Buy Now</Link></BuyNow>
+                  </R>
+                  </CardBottom>
               </Card>
             </Card1>
           </Row>
         </Right>
       </Container>
+      <Footer/>
     </>
   );
 };

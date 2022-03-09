@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
+import { bigMobiles, smallerScreen, tablets } from "../Responsive";
 const Container = styled.div`
   font-family: "Poppins";
 `;
@@ -11,6 +12,7 @@ const Nav = styled.div`
   margin: 20px 50px;
   margin-bottom: 30px;
   justify-content: space-between;
+  ${bigMobiles({margin:"20px"})}
 `;
 const Left = styled.div`
   display: flex;
@@ -27,9 +29,18 @@ const Li = styled.h4`
 `;
 const Body = styled.div`
   display: flex;
+  ${tablets({flexDirection:"column"})}  
+  ${bigMobiles({flexDirection:"column" })}
+
 `;
 const Img = styled.img`
   margin: 30px;
+`;
+const Img1 = styled.img`
+  margin: 30px;
+  ${tablets({display:"none"})}
+  ${bigMobiles({display:"none"})}
+
 `;
 const Left1 = styled.div`
   display: flex;
@@ -70,6 +81,7 @@ const L = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 200px;
+  ${bigMobiles({paddingRight:"30px"})}
 `;
 const R = styled.div`
   width: auto;
@@ -112,11 +124,13 @@ const H2 = styled.h2`
   font-weight: 600;
   font-size: 26px;
   color: #6a983c;
+  ${bigMobiles({fontSize:"18px"})}
 `;
 const H5 = styled.h5`
   color: #a9a9a9;
   font-weight: 600;
   font-size: 12px;
+  ${bigMobiles({fontSize:"10px"})}
 `;
 const Pr = styled.div`
   display: flex;
@@ -131,6 +145,7 @@ const Btn1 = styled.button`
   border: 1px solid #d1d1d1;
   padding: 15px;
   border-radius: 12px;
+  ${bigMobiles({padding:"8px"})}
 `;
 const Btn2 = styled.button`
   border: 2px solid #46760a;
@@ -143,6 +158,10 @@ const Btn2 = styled.button`
   font-size: 15px;
   font-weight: 700;
   padding: 15px;
+  ${bigMobiles({fontSize:"12px", padding:"8px"})}
+`;
+const Img5 = styled.img`
+  ${bigMobiles({display:"none"})}
 `;
 const Reviews = styled.div`
   margin: 30px;
@@ -194,6 +213,9 @@ const Card1 = styled.div`
   display: flex;
   position: relative;
   border: 1px solid #d1d1d1;
+  ${smallerScreen({width:"270px"})}
+  ${tablets({width:"270px"})}
+  ${bigMobiles({marginBottom:"20px", width:"350px"})}
 `;
 const Card = styled.div`
   background-color: white;
@@ -206,12 +228,16 @@ const ProductTitle = styled.h3`
   padding: 10px 0;
   font-weight: 500;
   font-size: 16px;
+  ${bigMobiles({fontSize:"22px", padding:"20px 0"})}
 `;
 const PDesc = styled.span`
   font-size: 12px;
   color: gray;
+  ${bigMobiles({fontSize:"15px"})}
 `;
-const Img3 = styled.img``;
+const Img3 = styled.img`
+${bigMobiles({width:"320px" })}
+`;
 const CardBottom = styled.div`
   display: flex;
   flex-direction: row;
@@ -221,6 +247,7 @@ const CardBottom = styled.div`
 const L3 = styled.div`
   display: flex;
   align-items: center;
+  ${bigMobiles({fontSize:"18px"})}
 `;
 const R3 = styled.div`
   display: flex;
@@ -235,13 +262,15 @@ const BuyNow = styled.button`
   background-color: #6a983c;
   color: white;
   font-weight: 700;
+  ${bigMobiles({padding:"12px 15px"})}
 `;
 const Row2 = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(238px , 1fr));
+  grid-gap: 30px;
   margin-top: 30px;
+  ${bigMobiles({flexDirection:"column" })}
+
 `;
 const ProductDetail = () => {
   return (
@@ -257,7 +286,7 @@ const ProductDetail = () => {
         </Nav>
         <Body>
           <Left1>
-            <Img src="productdesc2.png" />
+            <Img1 src="productdesc2.png" />
             <Img src="productdesc3.png" />
           </Left1>
           <Right>
@@ -323,7 +352,7 @@ const ProductDetail = () => {
                     <img style={{ padding: "0 8px" }} src="ad.png" />
                   </Btn1>
                   <Btn2>
-                    <img src="plus.png" /> Add to cart
+                    <Img5 src="plus.png" /> Add to cart
                   </Btn2>
                 </Pr>
               </Pc>

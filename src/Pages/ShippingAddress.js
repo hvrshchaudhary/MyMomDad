@@ -6,6 +6,7 @@ import Header from "../Components/Header";
 import Form from "../Components/ShippingAddress/Form";
 import SItems from "../Components/ShippingAddress/SItems";
 import STitles from "../Components/ShippingAddress/STitles";
+import { bigMobiles, smallTablets, tablets } from "../Responsive";
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
@@ -20,6 +21,7 @@ const Wrapper = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   margin: 15px 30px;
+  ${smallTablets({margin:"15px", fontSize:"22px"})}
 `;
 const Left = styled.div`
   width: 15%;
@@ -28,6 +30,7 @@ const Left = styled.div`
   padding: 20px;
   flex: 1;
   border-radius: 12px;
+  ${smallTablets({display:"none"})}
 `;
 const Dashboard = styled.div`
   display: flex;
@@ -46,6 +49,7 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 30px;
+  ${smallTablets({margin:"30px"})}
 `;
 const Top = styled.div`
   display: flex;
@@ -62,6 +66,9 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 15px;
   width: 15%;
+  ${tablets({width:"25%"})}
+  ${smallTablets({fontSize:"12px"})}
+  ${bigMobiles({width:"50%"})}
 `;
 const ShippingAddress = () => {
   return (

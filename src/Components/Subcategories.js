@@ -1,11 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { smallerTablets, smallTablets, tablets } from "../Responsive";
 import CardListView from "./CardListView";
+import FilterGroup69 from "./SubcategoryFilter/FilterGroup69";
+import FilterGroupWSearch from "./SubcategoryFilter/FilterGroupWSearch";
+import Stars from "./SubcategoryFilter/Stars";
 
 const Parent = styled.div`
   display: flex;
   flex-direction: row;
   margin: 30px;
+`;
+const Left = styled.div`
+  ${smallTablets({display:"none"})}
+  
 `;
 const FilterType = styled.div`
   display: flex;
@@ -41,12 +49,14 @@ const Input = styled.input`
 const Subcategories = () => {
   return (
     <Parent>
+      <Left>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           fontFamily: "Poppins",
+          
         }}
       >
         <div
@@ -271,6 +281,7 @@ const Subcategories = () => {
             </div>
           </SearchContainer>
           <FilterGroup style={{ display: "flex", flexDirection: "column" }}>
+            <h4 style={{fontWeight:"500", margin:"10px 0"}}>Filter group</h4>
             <Fi
               style={{
                 display: "flex",
@@ -543,9 +554,14 @@ const Subcategories = () => {
               Show more
             </h4>
           </FilterGroup>
+        <FilterGroup69/>
+        <FilterGroupWSearch/>
+        <Stars/>
         </div>
       </div>
+      </Left>
       <div style={{display:"flex",flex:"3", flexDirection:"column", width:"100%", marginRight:"40px"}}>
+        <CardListView />
         <CardListView />
         <CardListView />
         <CardListView />

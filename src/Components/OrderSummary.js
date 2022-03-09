@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { smallTablets, tablets } from '../Responsive';
 
 
 const Container = styled.div`
@@ -8,6 +9,7 @@ const Container = styled.div`
   font-family: "Poppins", sans-serif;
   width: 26vw;
   justify-content: center;
+  ${tablets({ height:"100vh" })}
 `;
 const Wrapper = styled.div`
   display: flex;

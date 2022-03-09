@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
+import HeaderW from "../Components/HeaderW";
 
 
 const Container = styled.div`
@@ -41,7 +41,7 @@ const ShoppingCart = () => {
   return (
     <>
       <Router>
-        <Header />
+        <HeaderW />
         <Container>
         <Top><h1 style={{fontWeight:"600", fontSize:"32px"}}>Your Cart</h1></Top>
         <Bottom>

@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles, smallTablets, tablets } from "../Responsive";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin: 45px;
   font-family: "Poppins", sans-serif;
+  ${smallTablets({flexDirection:"column"})}
+  ${bigMobiles({flexDirection:"column"})}
 `;
 const Left = styled.div`
   flex: 1;
@@ -16,10 +19,16 @@ const H1 = styled.p`
   font-weight: 600;
   font-size: 22px;
   margin-bottom: 35px;
+  ${bigMobiles({
+    marginBottom:"10px"
+  })}
 `;
 const Desc = styled.h5`
   font-weight: 350;
   font-size: 18px;
+  ${bigMobiles({
+    fontSize:"13px"
+  })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -28,6 +37,8 @@ const Right = styled.div`
   justify-content: center;
 `;
 const Img = styled.img`
+${bigMobiles({display:'none'})}
+${smallTablets({display:'none'})}
 `;
 const KnowAU = () => {
   return (

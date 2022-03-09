@@ -21,17 +21,17 @@ import ReturnAndComplaints from "./Pages/ReturnsAndComplaints";
 import ShippingAddress from "./Pages/ShippingAddress";
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Home/>}/>   
-    //     <Route path="/about" element={<AboutUs />}/>
-    //     <Route path="/contactus" element={<ContactUs/>}/>
-    //     <Route path="/categorypagelist" element={<CategoryPageList/>}/>
-    //     <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
-    //     <Route path="/productdetail" element={<ProductDetail/>}/>
-    //   </Routes>
-    // </Router>
-    <ShippingAddress/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>   
+        <Route path="/about" element={<AboutUs />}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/categorypagelist" element={<CategoryPageList/>}/>
+        <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
+        <Route path="/productdetail" element={<ProductDetail/>}/>
+        <Route path="/shipping" element={<ShippingAddress/>}/>
+      </Routes>
+    </Router>
   );
 }
 

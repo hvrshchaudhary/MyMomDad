@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import { bigMobiles, smallTablets, tablets } from '../Responsive';
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -8,6 +8,10 @@ const Container = styled.div`
   justify-content: space-around;
   background-color: #f1f1f1;
   font-family: "Poppins", sans-serif;
+${bigMobiles({
+  flexDirection:"column"
+})}
+
 `;
 const Item = styled.div`
   display: flex;
@@ -15,14 +19,22 @@ const Item = styled.div`
   align-items: center;
   justify-content: center;
   margin: 80px 0;
+  ${tablets({margin:"40px 30px"})}
+${smallTablets({margin:"40px 30px"})}
 `;
-const Img = styled.img``;
+const Img = styled.img`
+${bigMobiles({height:"70px"})}
+`;
 const H1 = styled.h1`
 font-weight: 600;
 font-size: 24px;
+${smallTablets({textAlign:"center", fontSize:"20px"})}
 `;
 const H3 = styled.h3`
-font-weight: 400;
+  font-weight: 400;
+  ${tablets({textAlign:"center"})}
+  ${smallTablets({textAlign:"center", fontSize:"16px"})}
+  ${bigMobiles({fontSize:"1rem"})}
 `;
 
 const Delivery = () => {

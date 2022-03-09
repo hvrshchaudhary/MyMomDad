@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { smallTablets } from "../../Responsive";
 
 const Container = styled.div`
   display: flex;
@@ -16,21 +17,27 @@ const H1 = styled.h1`
   font-weight: 600;
   font-size: 24px;
   margin-bottom:20px ;
+  ${smallTablets({fontSize:"14px", marginBottom:"12px"})}
 `;
 const Span = styled.div`
   display: flex;
   flex-direction: column;
+  ${smallTablets({fontSize:"12px"})}
 `;
 const L = styled.span`
   font-weight: 300;
   margin-bottom:12px ;
   font-size: 18px;
+  ${smallTablets({fontSize:"12px", marginBottom:"10px"})}
 `;
 const ShippingMethod = styled.div``;
-const Span1 = styled.span``;
+const Span1 = styled.span`
+  ${smallTablets({fontSize:"12px"})}
+`;
 const Span2 = styled.span`
   color: #FF7E27;
   font-weight: 500;
+  ${smallTablets({fontSize:"12px"})}
 `;
 const DetailsT = () => {
   return (

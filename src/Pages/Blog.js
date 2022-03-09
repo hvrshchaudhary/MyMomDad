@@ -5,6 +5,8 @@ import Bottom from "../Components/Blogs/Bottom";
 import BR from "../Components/Blogs/BR";
 import Header from "../Components/Blogs/Header";
 import Footer from "../Components/Footer";
+import HeaderW from "../Components/HeaderW";
+import { bigMobiles } from "../Responsive";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +20,7 @@ const Wrapper = styled.div`
 const Left = styled.div`
   flex: 1;
   margin-right: 20px;
+  ${bigMobiles({ display:"none" })}
 `;
 const Right = styled.div`
   flex: 5;

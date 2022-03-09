@@ -30,14 +30,14 @@ export const mediumTablets = (props) => {
 }
 export const smallTablets = (props) => {
     return css`
-        @media only screen and (max-width: 820px) {
+        @media only screen and (max-width: 910px) {
             ${props}
         }
     `;
 }
 export const smallerTablets = (props) => {
     return css`
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 810px) {
             ${props}
         }
     `;

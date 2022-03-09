@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles } from "../../Responsive";
 
 const Container = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ const Top = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 32px;
+  ${bigMobiles({ fontSize:"22px" })}
 `;
 const Span = styled.div`
   display: flex;
@@ -23,11 +25,13 @@ const S1 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const S2 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Row = styled.div`
   display: flex;
@@ -48,6 +52,7 @@ const Input = styled.textarea`
   padding: 15px 20px;
   height: 150px;
   width: 100%;
+  ${bigMobiles({ width:"90%" })}
 `;
 const AdditionalInformation = () => {
   return (
@@ -61,7 +66,7 @@ const AdditionalInformation = () => {
       </Top>
       <Row>
         <H3>Order notes</H3>
-        <Input placeholder="Need a specific delivery day? Sending a gitf? Let’s say ..." />
+        <Input placeholder="Need a specific delivery day? Sending a gift? Let’s say ..." />
       </Row>
     </Container>
   );

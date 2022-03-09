@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { smallMobiles, smallTablets } from '../../Responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -15,15 +16,20 @@ const Left = styled.div`
 `;
 const Span = styled.span`
   font-weight: 400;
+  ${smallMobiles({fontSize:"12px"})}
 `;
 const Right = styled.div`
   flex: 2;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 `;
 const R = styled.div`
   display: flex;
   align-items: center;
+`;
+const Img = styled.img`
+  ${smallMobiles({height:"12px"})}
 `;
 const SItems = () => {
   return (
@@ -39,7 +45,7 @@ const SItems = () => {
           <Span>Country</Span>
         </Right>
           <R>
-            <img src='dots.png'/>
+            <Img src='dots.png'/>
           </R>
       </Wrapper>
       <hr style={{margin:"15px 0", borderTop:"1px solid #EAECEE"}}/>    

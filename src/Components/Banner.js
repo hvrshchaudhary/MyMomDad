@@ -2,14 +2,15 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { smallerScreen, smallTablets, tablets } from "../Responsive";
+import { mobiles, smallerScreen, smallTablets, tablets } from "../Responsive";
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
-  height: 80vh;
-  margin: 0 75px;
-  ${tablets({ height: "50vh", margin: "0 50px" })}
-  ${smallTablets({ height: "35vh", margin: "0 50px" })}
+  height: auto;
+  margin: 30px 75px;
+  ${tablets({ margin: "20px 50px" })}
+  ${smallTablets({ margin: "20px 50px" })}
+  ${mobiles({ margin:"20px" })}
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -18,6 +19,7 @@ const Wrapper = styled.div`
   grid-template-rows: "1fr";
   grid-template-areas: "left right";
   align-items: center;
+  ${mobiles({ display:"flex", flexDirection:"column"})}
 `;
 const Left = styled.div`
   height: 100%;
@@ -28,6 +30,8 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  ${mobiles({ marginRight:"0", marginBottom:"20px"})}
+
 `;
 const Right = styled.div`
   height: 100%;
@@ -38,6 +42,7 @@ const Right = styled.div`
   grid-area: right;
   justify-content: center;
   margin-left: 20px;
+  ${mobiles({ marginLeft:"0"})}
 `;
 const Img = styled.img`
   width: 100%;
@@ -57,6 +62,7 @@ const Headings = styled.div`
   top: 60px;
   left: 50px;
   ${smallTablets({ top:"30px", left:"25px"})}
+  ${mobiles({ top:"25px", left:"20px"})}
 `;
 const BSubFocus = styled.h5`
   font-weight: 600;
@@ -70,6 +76,7 @@ const BHead = styled.h1`
   ${smallerScreen({ marginBottom: "160px" })}
   ${tablets({ marginBottom: "70px", fontSize: "24px", fontWeight: "500" })}
   ${smallTablets({ marginBottom: "60px", fontWeight: "450", fontSize: "18px" })}
+  ${mobiles({ marginBottom:"45px"})}
 `;
 const Button = styled.button`
   display: flex;

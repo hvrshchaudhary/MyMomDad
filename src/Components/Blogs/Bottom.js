@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles } from "../../Responsive";
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const Span = styled.span`
 const P = styled.span`
   padding: 0 10px;
   font-size: 12px;
+  ${bigMobiles({ padding:"3px" })}
 `;
 const Center = styled.div``;
 const Button = styled.button`
@@ -29,6 +31,7 @@ const Button = styled.button`
   border-radius: 12px;
   margin: 10px;
   margin-bottom: 0;
+  ${bigMobiles({ fontSize:"10px", padding:"8px 12px" })}
 `;
 const Right = styled.div``;
 const Buttonx = styled.button`

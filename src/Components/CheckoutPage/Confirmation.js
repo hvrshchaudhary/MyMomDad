@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { bigMobiles } from '../../Responsive';
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ const Top = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 32px;
+  ${bigMobiles({ fontSize:"22px" })}
 `;
 const Span = styled.div`
   display: flex;
@@ -24,11 +26,13 @@ const S1 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const S2 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Row = styled.div`
   display: flex;
@@ -39,6 +43,7 @@ const Row = styled.div`
   padding: 15px 20px;
   width: 92%;
   align-items: center;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Button = styled.button`
   padding: 20px 13px;
@@ -51,10 +56,19 @@ const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
   font-size: 18px;
+  ${bigMobiles({ fontSize:"12px", width:"130px", padding:"10px" })}
 `;
 const Info = styled.div`
   width: 300px;
   margin-top: 20px;
+`;
+const Label = styled.label`
+  font-size:14px;
+  ${bigMobiles({ fontSize:"10px" })}
+`;
+const Span2 = styled.span`
+  font-size: 15px;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Confirmation = () => {
   return (
@@ -68,17 +82,17 @@ const Confirmation = () => {
       </Top>
       <Row>
         <input type="checkbox" />
-        <label style={{fontWeight:"400", fontSize:"14px", paddingLeft:"10px"}}>I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+        <Label style={{fontWeight:"400",  paddingLeft:"10px"}}>I agree with sending an Marketing and newsletter emails. No spam, promissed!</Label>
       </Row>
       <Row>
         <input type="checkbox" />
-        <label style={{fontWeight:"400", fontSize:"14px", paddingLeft:"10px"}}>I agree with our terms and conditions and privacy policy.</label>
+        <Label style={{fontWeight:"400",  paddingLeft:"10px"}}>I agree with our terms and conditions and privacy policy.</Label>
       </Row>
       <Button>Complete order</Button>
       <Info>
           <img src='yes.png'/>
           <h4 style={{fontWeight:"600",fontSize:"15px"}}>All your data are safe</h4>
-          <span style={{fontWeight:"400", fontSize:"15px", color:"#a9a9a9"}}>We are using the most advanced security to provide you the best experience ever.</span>
+          <Span2 style={{fontWeight:"400", color:"#a9a9a9"}}>We are using the most advanced security to provide you the best experience ever.</Span2>
       </Info>
     </Container>
   )

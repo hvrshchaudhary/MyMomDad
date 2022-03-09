@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles, smallTablets, tablets } from "../../Responsive";
 
 const Container = styled.div`
   display: flex;
@@ -20,6 +21,7 @@ const Top = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 32px;
+  ${smallTablets({fontSize:"22px"})}
 `;
 const Bottom = styled.div`
   display: flex;
@@ -29,16 +31,22 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 17px 0;
+  ${smallTablets({justifyContent:"space-around"})}
+  ${bigMobiles({flexDirection:"column", marginBottom:"0"})}
 `;
 const C1 = styled.div`
   display: flex;
   flex-direction: column;
   width: 29vw;
+  ${smallTablets({width:"36vw"})}
+  ${bigMobiles({width:"100%"})}
 `;
 const C2 = styled.div`
   display: flex;
   flex-direction: column;
   width: 29vw;
+  ${smallTablets({width:"36vw"})}
+  ${bigMobiles({width:"100%"})}
 `;
 const H3 = styled.h3`
   font-weight: 400;
@@ -52,7 +60,8 @@ const Input = styled.input`
   font-weight: 400;
   font-size: 18px;
   padding: 15px 20px;
-  width: 80%;
+  width: 90%;
+  ${smallTablets({padding:"10px 20px"})}
 `;
 const Button = styled.button`
   padding: 10px 6px;
@@ -64,6 +73,9 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 15px;
   width: 15%;
+  ${tablets({width:"25%"})}
+  ${smallTablets({padding:"6px", fontSize:"12px"})}
+  ${bigMobiles({width:"70%"})}
 `;
 const Row2 = styled.div`
   display: flex;

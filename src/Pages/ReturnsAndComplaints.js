@@ -7,6 +7,7 @@ import RTitles from "../Components/ReturnsAndComplaints/RTitles";
 import RItemsPending from "../Components/ReturnsAndComplaints/RItemsPending";
 import RItemsCompleted from "../Components/ReturnsAndComplaints/RItemsCompleted";
 import RDetails from "../Components/ReturnsAndComplaints/RDetails";
+import { bigMobiles, smallerTablets, smallMobiles, smallScreen, smallTablets } from "../Responsive";
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
@@ -17,10 +18,15 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   display: flex;
+  ${bigMobiles({padding:"15px"})}
+  ${smallMobiles({padding:"15px", paddingTop:"10px"})}
 `;
 const H1 = styled.h1`
   font-weight: 600;
   margin: 15px 30px;
+  ${smallTablets({margin:"18px", fontSize:"20px"})}
+  ${bigMobiles({marginBottom:"0"})}
+  ${smallMobiles({margin:"14px", fontSize:"14px"})}
 `;
 const Left = styled.div`
   width: 15%;
@@ -29,6 +35,9 @@ const Left = styled.div`
   padding: 20px;
   flex: 1;
   border-radius: 12px;
+  ${smallTablets({margin:"20px", padding:"10px"})}
+  ${smallerTablets({display:"none"})}
+  ${smallMobiles({margin:"15px"})}
 `;
 const Dashboard = styled.div`
   display: flex;
@@ -37,16 +46,21 @@ const Dashboard = styled.div`
 const H3 = styled.h3`
   margin: 20px 5px;
   font-weight: 700;
+  ${smallTablets({margin:"18px 3px", fontSize:"14px", fontWeight:"550"})}
+  ${smallMobiles({margin:"15px 2px", fontSize:"12px", fontWeight:"400"})}
 `;
 const Item = styled.span`
   margin: 15px 5px;
   font-weight: 700;
+  ${smallTablets({margin:"18px 3px", fontSize:"14px", fontWeight:"550"})}
+  ${smallMobiles({margin:"15px 2px", fontSize:"12px", fontWeight:"400"})}
 `;
 const Right = styled.div`
   flex: 5;
   display: flex;
   flex-direction: column;
   margin-right: 30px;
+  ${smallerTablets({margin:"20px"})}
 `;
 const ReturnAndComplaints = () => {
   return (
@@ -54,7 +68,7 @@ const ReturnAndComplaints = () => {
       <Router>
         <Header />
         <Container>
-          <H1>Order History</H1>
+          <H1>Returns And Complaints</H1>
           <Wrapper>
             <Left>
               <Dashboard>

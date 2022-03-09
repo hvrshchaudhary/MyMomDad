@@ -3,6 +3,7 @@ import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
+import { bigMobiles, tablets } from "../Responsive";
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
@@ -14,6 +15,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #9e9e9e;
+  ${bigMobiles({ backgroundColor:"white" })}
 `;
 const Sex = styled.div`
   display: flex;
@@ -22,6 +24,8 @@ const Sex = styled.div`
   background-color: white;
   padding: 30px;
   border-radius: 12px;
+  ${tablets({ width:"50%" })}
+  ${bigMobiles({ width:"80%", paddingLeft:"10px"})}
 `;
 const Close = styled.div`
   display: flex;
@@ -38,12 +42,14 @@ const H1 = styled.h1`
   font-size: 22px;
   text-align: center;
   margin: 20px 0 30px 0;
+  ${tablets({ fontSize:"18px", margin:"10px 0 15px 0" })}
 `;
 const Item = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
   margin-bottom: 20px;
+  ${tablets({ marginBottom:"10px" })}
 `;
 const Span = styled.span`
   font-weight: 600;
@@ -56,6 +62,7 @@ const Input = styled.input`
   font-size: 18px;
   padding: 15px 20px;
   width: 92%;
+  ${tablets({ fontSize:"15px" })}
 `;
 const Dfp = styled.div`
   display: flex;
@@ -67,6 +74,7 @@ const Fp = styled.span`
   font-weight: 300;
   color: #6A983C;
   font-size: 16px;
+  ${tablets({ fontSize:"14px" })}
  
 `;
 const Bottom = styled.div`
@@ -94,6 +102,7 @@ const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
   font-size: 15px;
+  ${tablets({ fontSize:"13px", padding:"10px 40px" })}
 `;
 const Login = () => {
   return (

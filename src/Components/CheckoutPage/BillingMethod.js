@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { bigMobiles } from "../../Responsive";
 
 const Container = styled.div`
   display: flex;
   font-family: "Poppins", sans-serif;
   flex-direction: column;
   margin-top: 60px;
+  ${bigMobiles({ marginTop:"20px"})}
 `;
 const Top = styled.div`
   display: flex;
@@ -14,6 +16,7 @@ const Top = styled.div`
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 32px;
+  ${bigMobiles({ fontSize:"22px"})}
 `;
 const Span = styled.div`
   display: flex;
@@ -23,11 +26,13 @@ const S1 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const S2 = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: #a9a9a9;
+  ${bigMobiles({ fontSize:"12px" })}
 `;
 const Bottom = styled.div``;
 const Row = styled.div`
@@ -49,6 +54,7 @@ const L = styled.div`
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
+  align-items: center;
 `;
 const Name = styled.span`
   font-weight: 600;
@@ -101,7 +107,7 @@ const BillingMethod = () => {
             </L>
             <R>
               <Ap>Additional price</Ap>
-              <img src="dhl.png" />
+              <img style={{height:"auto"}} src="dhl.png" />
             </R>
           </Div>
         </Row>

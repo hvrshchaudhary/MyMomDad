@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { smallTablets, tablets } from "../Responsive";
+import { smallTablets, bigMobiles,tablets } from "../Responsive";
 
 const Container = styled.div`
   background-color: #f1f1f1;
+  ${bigMobiles({
+    height:"760px"
+  })}
   font-family: 'Poppins', sans-serif;
+
 `;
 const Wrapper = styled.div`
   padding: 30px;
@@ -22,16 +26,21 @@ const Heading = styled.h1`
 `;
 const Bottom = styled.div``;
 const Cards = styled.div`
-  height: 30vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "card1 card2 card3 card4";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  ${bigMobiles({
+    display:"flex",
+    flexDirection:"column",
+    position:"relative",
+    top:"15rem"
+
+  })}
   ${tablets({ height:"25vh" })}
   /* ${smallTablets({ height:"20vh" })} */
 `;
 const Card1 = styled.div`
-  grid-area: card1;
+
   border-radius: 10px;
   display: flex;
   justify-self: flex-start;
@@ -39,9 +48,11 @@ const Card1 = styled.div`
   justify-content: center;
   align-items: flex-end;
   ${tablets({ alignSelf:"center" })}
+  ${bigMobiles({
+    margin:"10px 0",
+  })}
 `;
 const Card2 = styled.div`
-  grid-area: card2;
   border-radius: 10px;
   display: flex;
   justify-self: flex-start;
@@ -49,9 +60,11 @@ const Card2 = styled.div`
   justify-content: center;
   align-items: flex-end;
   ${tablets({ alignSelf:"center" })}
+  ${bigMobiles({
+    margin:"10px 0",
+  })}
 `;
 const Card3 = styled.div`
-  grid-area: card3;
   border-radius: 10px;
   display: flex;
   justify-self: flex-start;
@@ -59,9 +72,11 @@ const Card3 = styled.div`
   justify-content: center;
   align-items: flex-end;
   ${tablets({ alignSelf:"center" })}
+  ${bigMobiles({
+    margin:"10px 0",
+  })}
 `;
 const Card4 = styled.div`
-  grid-area: card4;
   border-radius: 10px;
   display: flex;
   justify-self: flex-start;
@@ -69,8 +84,12 @@ const Card4 = styled.div`
   justify-content: center;
   align-items: flex-end;
   ${tablets({ alignSelf:"center" })}
+  ${bigMobiles({
+    margin:"10px 0",
+  })}
 `;
 const Img = styled.img`
+  
   ${tablets({ height: "180px", width: "220px" })}
   ${smallTablets({ height: "150px", width: "170px" })}
 
