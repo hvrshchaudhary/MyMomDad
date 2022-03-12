@@ -27,6 +27,9 @@ import DProducts from "./Pages/DProducts";
 import DOrders from "./Pages/DOrders";
 import DOurstaff from "./Pages/DOurstaff";
 import VendorC from "./Pages/Vendor";
+import Vendor from "./Pages/Vendor";
+import AddProduct from "./Pages/AddProduct";
+import AddCategory from "./Pages/AddCategory";
 function App() {
   return (
     // <Router>
@@ -40,7 +43,7 @@ function App() {
     //     <Route path="/shipping" element={<ShippingAddress/>}/>
     //   </Routes>
     // </Router>
-    <VendorC/>
+    <AddCategory/>
   );
 }
 

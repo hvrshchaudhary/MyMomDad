@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Dashboard20 from '../Components/AdminPanel/Dashboard/Dashboard20';
 import Sidebar from '../Components/AdminPanel/Sidebar'
+import VendorC from '../Components/AdminPanel/Vendors/VendorC';
 
 const Container = styled.div`
   font-family: "Poppins", sans-serif;
@@ -17,7 +18,7 @@ const Right = styled.div`
   flex: 5;
   background-color: #f5f5f5;
 `;
-const VendorC = () => {
+const Vendor = () => {
   return (
     <Container>
         <Wrapper>
@@ -32,4 +33,4 @@ const VendorC = () => {
   )
 }
 
-export default VendorC
+export default Vendor

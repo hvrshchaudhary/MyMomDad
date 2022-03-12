@@ -106,7 +106,7 @@ const VendorC = () => {
               return (
                 <>
                   <Row>
-                    <SpanR>{item}</SpanR>
+                    <SpanR><img src={item}/></SpanR>
                     <SpanRM>jack</SpanRM>
                     <SpanR>xyz@gmail.com</SpanR>
                     <SpanRM>08</SpanRM>
