@@ -32,18 +32,42 @@ import AddProduct from "./Pages/AddProduct";
 import AddCategory from "./Pages/AddCategory";
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Home/>}/>   
-    //     <Route path="/about" element={<AboutUs />}/>
-    //     <Route path="/contactus" element={<ContactUs/>}/>
-    //     <Route path="/categorypagelist" element={<CategoryPageList/>}/>
-    //     <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
-    //     <Route path="/productdetail" element={<ProductDetail/>}/>
-    //     <Route path="/shipping" element={<ShippingAddress/>}/>
-    //   </Routes>
-    // </Router>
-    <AddCategory/>
+    <Router>
+       <Routes>
+         <Route path="/" element={<Home/>}/>   
+         <Route path="/about" element={<AboutUs />}/>
+         <Route path="/contactus" element={<ContactUs/>}/>
+         <Route path="/categorypagelist" element={<CategoryPageList/>}/>
+         <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
+         <Route path="/productdetail" element={<ProductDetail/>}/>
+         <Route path="/shipping" element={<ShippingAddress/>}/>
+         <Route path="/Subcategories" element={<Subcategories/>}/>
+         <Route path="/Cart" element={<Cart/>}/>
+         <Route path="/ShoppingCart" element={<ShoppingCart/>}/>
+         <Route path="/OrderSummary" element={<OrderSummary/>}/>
+         <Route path="/Checkout" element={<Checkout/>}/>
+         <Route path="/Subscribe" element={<Subscribe/>}/>
+         <Route path="/Blog" element={<Blog/>}/>
+         <Route path="/Login" element={<Login/>}/>
+         <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
+         <Route path="/Profile" element={<Profile/>}/>
+         <Route path="/OrderHistory" element={<OrderHistory/>}/>
+         <Route path="/ReturnAndComplaints" element={<ReturnAndComplaints/>}/>
+         <Route path="/Dashboard" element={<Dashboard/>}/>
+         <Route path="/Dashboard2" element={<Dashboard2/>}/>
+         <Route path="/Dashboard2" element={<Dashboard2/>}/>
+         <Route path="/Dashboard1" element={<Dashboard1/>}/>
+         <Route path="/DCategory" element={<DCategory/>}/>
+         <Route path="/DProducts" element={<DProducts/>}/>
+         <Route path="/DOrders" element={<DOrders/>}/>
+         <Route path="/DOurstaff " element={<DOurstaff />}/>
+         <Route path="/VendorC " element={<VendorC />}/>
+         <Route path="/Vendor " element={<Vendor />}/>
+         <Route path="/AddProduct " element={<AddProduct />}/>
+         <Route path="/AddCategory " element={<AddCategory />}/>
+       </Routes>
+     </Router>
+
   );
 }
 
