@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { bigMobiles } from '../Responsive';
 
 const Container = styled.div`
@@ -62,7 +62,6 @@ const Div = styled.div`
   border-radius: 12px;
   ${bigMobiles({padding:"30px 20px", width:"90%"})}
 `;
-const Img = styled.img``;
 const H3 = styled.h3`
   font-weight:500;
   color:#707275;
@@ -77,12 +76,23 @@ const Input = styled.input`
   border-radius: 12px;
   padding: 14px 20px;
   ${bigMobiles({padding:"10px 16px", width:"90%"})}
+
 `;
 const Buttons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 15px 0;
+`;
+const Cancel = styled.button`
+  border: 2px solid #46760a;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #6A983C;
+  padding: 12px;
+  margin-right: 20px;
+  ${bigMobiles({padding:"7px"})}
 `;
 const Add = styled.button`
   border: 2px solid #46760a;
@@ -93,38 +103,56 @@ const Add = styled.button`
   padding: 12px;
   ${bigMobiles({padding:"7px"})}
 `;
-const AddCategory = () => {
+const AddStaff = () => {
   return (
     <Container>
         <Wrapper>
-        <Top>
-                <H1>Add Product</H1>
+            <Top>
+                <H1>Add Staff</H1>
                 <H4>Add your product and necessary information from here</H4>
             </Top>
             <Bottom>
                 <Row>
-                    <Span>Product Image</Span>
+                    <Span>Staff Image</Span>
                     <Div>
-                        <Img src='upload.svg'/>
+                        <img src='upload.svg'/>
                         <H3>Drag your image here</H3>
                         <SpanM>(Only *.jpeg and *.png images will be accepted)</SpanM>
                     </Div>
                 </Row>
                 <Row>
-                    <Span>Parent Category</Span>
-                    <Input placeholder='Parent Category'/>
+                    <Span>Name</Span>
+                    <Input/>
                 </Row>
                 <Row>
-                    <Span>Child Category</Span>
-                    <Input placeholder='Child Category'/>
+                    <Span>Email</Span>
+                    <Input/>
                 </Row>
-                </Bottom>
-                <Buttons>
-                <Add>Add Category</Add>
+                <Row>
+                    <Span>Password</Span>
+                    <Input/>
+                </Row>
+                <Row>
+                    <Span>Contact</Span>
+                    <Input/>
+                </Row>
+                <Row>
+                    <Span>Joining Date</Span>
+                    <Input/>
+                </Row>
+                <Row>
+                    <Span>Staff Role</Span>
+                    <Input/>
+                </Row>
+                
+            <Buttons>
+                <Cancel>Cancel</Cancel>
+                <Add>Add Staff</Add>
             </Buttons>
+            </Bottom>
         </Wrapper>
     </Container>
   )
 }
 
-export default AddCategory
+export default AddStaff

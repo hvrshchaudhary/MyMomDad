@@ -30,6 +30,7 @@ import VendorC from "./Pages/Vendor";
 import Vendor from "./Pages/Vendor";
 import AddProduct from "./Pages/AddProduct";
 import AddCategory from "./Pages/AddCategory";
+import AddStaff from "./Pages/AddStaff";
 function App() {
   return (
     // <Router>
@@ -43,7 +44,7 @@ function App() {
     //     <Route path="/shipping" element={<ShippingAddress/>}/>
     //   </Routes>
     // </Router>
-    <AddCategory/>
+    <AddStaff/>
   );
 }
 
