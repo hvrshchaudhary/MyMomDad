@@ -92,6 +92,7 @@ const Btn1 = styled.button`
   font-size: 15px;
   padding: 12px 16px;
   border: 2px solid #46760a;
+  cursor: pointer;
   border-radius: 12px;
   margin: 10px;
   margin-bottom: 0;
@@ -103,6 +104,7 @@ const Btn2 = styled.button`
   font-weight: 700;
   font-size: 15px;
   padding: 12px;
+  cursor: pointer;
   border-radius: 12px;
   border: none;
   margin: 10px;

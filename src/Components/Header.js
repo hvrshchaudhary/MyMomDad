@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineUser, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import {
   smallScreen,
@@ -150,7 +150,7 @@ const Right = styled.div`
   display: flex;
   font-size: 24px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   ${tablets({ fontSize: "18px" })}
 `;
 const Bottom = styled.div`
@@ -228,7 +228,7 @@ const Header = () => {
             <Logo><Img src="logo.png"/>MyMomDad</Logo>
           </Left>
           <Center>
-            <SearchContainer>
+            {/* <SearchContainer>
               <L>
                 <Selector>All Categories </Selector>
                 <IoIosArrowDown />
@@ -240,10 +240,11 @@ const Header = () => {
               <R>
                 <AiOutlineSearch />
               </R>
-            </SearchContainer>
+            </SearchContainer> */}
           </Center>
           <Right>
-            <AiOutlineUser />
+            <AiOutlineUser style={{cursor:"pointer"}}/>
+            <AiOutlineShoppingCart style={{cursor:"pointer"}}/>
           </Right>
         </Top>
         <Bottom>
@@ -255,11 +256,11 @@ const Header = () => {
               <IoIosArrowDown />
             </MenuItem>
             <MenuItem2 >
-              For Mom & Dad
+              For Mom Dad
               <IoIosArrowDown />
             </MenuItem2>
             <MenuItem2>
-              From Mom & Dad
+              From Mom Dad
               <IoIosArrowDown />
             </MenuItem2>
             <MenuItem>

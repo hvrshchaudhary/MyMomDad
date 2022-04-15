@@ -100,6 +100,23 @@ const Checkout = styled.button`
   cursor: pointer;
   font-size: 15px;
 `;
+const GiftCard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  align-items: center;
+`;
+const Span = styled.span``;
+const Add = styled.button`
+  padding: 8px;
+  background-color: #6A983C;
+  border: 2px solid #46760A;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+`;
 
 const Cart = () => {
   return (
@@ -140,6 +157,10 @@ const Cart = () => {
           </Right>
         </Product>
           <hr style={{marginTop:"30px", borderTop:"1px solid #f9f9f9"}}/>
+          <GiftCard>  
+            <Span>Add GiftCard</Span>
+            <Add>Add</Add>
+          </GiftCard>
           </Top1>
           <Subtotal>
               <h4 style={{fontWeight:"600", fontSize:"12px", marginBottom:"10px"}}>Subtotal</h4>

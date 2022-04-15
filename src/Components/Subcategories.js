@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { smallerTablets, smallTablets, tablets } from "../Responsive";
 import CardListView from "./CardListView";
+import Colors from "./SubcategoryFilter/Colors";
 import FilterGroup69 from "./SubcategoryFilter/FilterGroup69";
 import FilterGroupWSearch from "./SubcategoryFilter/FilterGroupWSearch";
 import Stars from "./SubcategoryFilter/Stars";
@@ -70,6 +71,20 @@ const Subcategories = () => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column" }}>
+          <SearchContainer>
+            <div
+              style={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                padding: "14px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img src="search.png" />
+              <Input placeholder="Search Products, Categories ..." />
+            </div>
+          </SearchContainer>
             <h1
               style={{ fontWeight: "600", fontSize: "24px", padding: "10px 0" }}
             >
@@ -557,6 +572,10 @@ const Subcategories = () => {
         <FilterGroup69/>
         <FilterGroupWSearch/>
         <Stars/>
+        <Colors/>
+        <div>
+          <img style={{height:"160px", width:"260px", marginTop:"10px"}} src="ad.jpg"/>
+        </div>
         </div>
       </div>
       </Left>

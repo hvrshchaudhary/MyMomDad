@@ -31,20 +31,20 @@ import Vendor from "./Pages/Vendor";
 import AddProduct from "./Pages/AddProduct";
 import AddCategory from "./Pages/AddCategory";
 import AddStaff from "./Pages/AddStaff";
+import AddGiftCard from "./Components/AddGiftCard";
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Home/>}/>   
-    //     <Route path="/about" element={<AboutUs />}/>
-    //     <Route path="/contactus" element={<ContactUs/>}/>
-    //     <Route path="/categorypagelist" element={<CategoryPageList/>}/>
-    //     <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
-    //     <Route path="/productdetail" element={<ProductDetail/>}/>
-    //     <Route path="/shipping" element={<ShippingAddress/>}/>
-    //   </Routes>
-    // </Router>
-    <AddStaff/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>   
+        <Route path="/about" element={<AboutUs />}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/categorypagelist" element={<CategoryPageList/>}/>
+        <Route path="/categorypagegrid" element={<CategoryPageGrid/>}/>
+        <Route path="/productdetail" element={<ProductDetail/>}/>
+        <Route path="/shipping" element={<ShippingAddress/>}/>
+      </Routes>
+    </Router>
   );
 }
 

@@ -195,7 +195,7 @@ const Header = () => {
             <Logo>MyMomDad</Logo>
           </Left>
           <Center>
-            <SearchContainer>
+            {/* <SearchContainer>
               <L>
                 <Selector>All Categories </Selector>
                 <IoIosArrowDown />
@@ -207,7 +207,7 @@ const Header = () => {
               <R>
                 <AiOutlineSearch />
               </R>
-            </SearchContainer>
+            </SearchContainer> */}
           </Center>
           <Right>
             <AiOutlineUser />

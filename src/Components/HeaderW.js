@@ -228,7 +228,7 @@ const HeaderW = () => {
             <Logo>MyMomDad</Logo>
           </Left>
           <Center>
-            <SearchContainer>
+            {/* <SearchContainer>
               <L>
                 <Selector>All Categories </Selector>
                 <IoIosArrowDown />
@@ -240,7 +240,7 @@ const HeaderW = () => {
               <R>
                 <AiOutlineSearch />
               </R>
-            </SearchContainer>
+            </SearchContainer> */}
           </Center>
           <Right>
             <AiOutlineUser />
@@ -255,11 +255,11 @@ const HeaderW = () => {
               <IoIosArrowDown />
             </MenuItem>
             <MenuItem2 >
-              For Mom & Dad
+              For Mom Dad
               <IoIosArrowDown />
             </MenuItem2>
             <MenuItem2>
-              From Mom & Dad
+              From Mom Dad
               <IoIosArrowDown />
             </MenuItem2>
             <MenuItem>
